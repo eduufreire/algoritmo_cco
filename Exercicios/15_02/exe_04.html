@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 4</title>
+</head>
+<body>
+
+    <h1>Cálculo de Economia</h1>
+    
+    <p>Insira o valor da passagem: </p>
+    <input id="inputValorPassagem">
+
+    <p>Insira a quantidade de viagens por mês:</p>
+    <input id="inputQtdeViagem">
+
+    <br>
+
+    <button onclick="calcularEconomia()">Ver economia</button>
+    
+    
+</body>
+</html>
+
+<script>
+
+    function calcularEconomia() {
+        
+        var valorPassagem = Number(inputValorPassagem.value)
+        var qtdeViagem = Number(inputQtdeViagem.value)
+        
+        var economia = (valorPassagem * qtdeViagem)  / 2
+
+        alert("Você economizará R$" + economia.toFixed(2) + " realizando " + 
+        qtdeViagem + " viagens por mês.")
+
+    }
+
+</script>

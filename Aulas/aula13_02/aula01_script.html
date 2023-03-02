@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Primeira Aula</title>
+
+        <link rel="stylesheet" href="./style.css">
+    </head>
+
+    <body>
+
+        <h2>Minha primeira página com HTML e JS</h2> 
+        <button onclick="welcome()">Clique aqui</button>
+
+        <br><hr>
+
+        <h2>Manipulação de campos</h2>
+
+        <input id="inputMensagem">
+        <button onclick="exibirMensagem()">Mostrar mensagem</button>
+
+    </body>
+</html>
+
+<!-- ==/== -->
+
+<script>
+
+    function welcome(){
+        alert("Bem-vindo, usuário! c:")
+    }
+
+    function exibirMensagem(){
+        alert(inputMensagem.value)
+    }
+
+</script>

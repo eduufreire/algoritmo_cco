@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 5</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+        body {
+            background-color: #121214;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10vh;
+        }
+
+        .title {
+            color: white;
+            font-family: 'Oswald', sans-serif;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .card {
+            background-color: #202024;
+            width: 450px;
+            height: 420px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .card p {
+            color: white;
+            font-family: 'Kanit', sans-serif;
+            font-size: 20px;
+            margin: 0;
+        }
+
+        .card input {
+            width: 300px;
+            height: 25px;
+            color: white;
+            font-family: 'Kanit', sans-serif;
+            font-size: 18px;
+
+            border: 2px solid #29292e;
+            border-radius: 5px;
+            background-color: #121214;
+        }
+
+        .card input:focus {
+            outline: 0;
+            border: 2px solid #8257e5;
+            transition: 0.5s;
+        }
+
+        .inputs {
+            margin: 15px;
+        }
+
+        button {
+            width: 150px;
+            height: 50px;
+            border-radius: 8px;
+            border: none;
+            background-color: #8257e5;
+            color: white;
+            font-family: 'Kanit', sans-serif;
+            font-size: 20px;
+            transition: 0.5s;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #9e7bf0;
+            cursor: pointer;
+        }
+
+        #contorno {
+            border: 5px solid #202024;
+            border-radius: 20px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 class="title">Calculadora de Arrecadação</h2>
+
+    <div id="contorno">
+
+
+        <div class="card">
+            <div class="inputs">
+                <p>Ingressos vendidos - Estudante:</p>
+                <input id="inputEstudante">
+            </div>
+
+            <div class="inputs">
+                <p>Ingressos vendidos - Comum:</p>
+                <input id="inputComum">
+            </div>
+
+            <div class="inputs">
+                <p>Valor do ingresso comum:</p>
+                <input id="inputValorIngresso">
+            </div>
+
+            <button onclick="calculoArrecadacao()">Calcular</button>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+
+    let qtdeEstudante = 0
+    let qtdeComum = 0
+    let valorIngresso = 0
+    let totalArrecadacao = 0
+
+
+    function calculoArrecadacao() {
+
+        qtdeEstudante = inputEstudante.value
+        qtdeComum = inputComum.value
+        valorIngresso = inputValorIngresso.value
+
+        totalArrecadacao = (valorIngresso / 2) * qtdeEstudante
+        totalArrecadacao += valorIngresso * qtdeComum
+
+        alert("A arrecadação foi de R$" + totalArrecadacao)
+
+    }
+
+</script>

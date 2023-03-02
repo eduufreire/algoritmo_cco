@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 6</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+        body {
+            background-color: #121214;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10vh;
+        }
+
+        .title {
+            color: white;
+            font-family: 'Oswald', sans-serif;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .card {
+            background-color: #202024;
+            width: 420px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .card p {
+            color: white;
+            font-family: 'Kanit', sans-serif;
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .card input {
+            width: 300px;
+            height: 25px;
+            color: white;
+            font-family: 'Kanit', sans-serif;
+            font-size: 18px;
+
+            border: 2px solid #29292e;
+            border-radius: 5px;
+            background-color: #121214;
+        }
+
+        .card input:focus {
+            outline: 0;
+            border: 2px solid #8257e5;
+            transition: 0.5s;
+        }
+
+        .inputs {
+            margin: 15px;
+        }
+
+        button {
+            width: 180px;
+            height: 50px;
+            border-radius: 8px;
+            border: none;
+            background-color: #8257e5;
+            color: white;
+            font-family: 'Kanit', sans-serif;
+            font-size: 20px;
+            transition: 0.5s;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #9e7bf0;
+            cursor: pointer;
+        }
+
+        #contorno {
+            border: 5px solid #202024;
+            border-radius: 20px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 class="title">Calculadora de Frequência</h2>
+
+    <div id="contorno">
+
+
+        <div class="card">
+            <div class="inputs">
+                <p>Nome:</p>
+                <input id="inputNome">
+            </div>
+
+            <div class="inputs">
+                <p>Aulas totais:</p>
+                <input id="inputAulaTotal">
+            </div>
+
+            <div class="inputs">
+                <p>Aulas que faltou:</p>
+                <input id="inputFaltaAula">
+            </div>
+
+            <button onclick="calcularFrequencia()">Calcular</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+    let nome = ''
+    let qtdeAulas = 0
+    let qtdeFalta = 0
+    let totalFrequencia = 0
+
+
+    function calcularFrequencia() {
+
+        nome = inputNome.value
+        qtdeAulas = inputAulaTotal.value
+        qtdeFalta = inputFaltaAula.value
+
+        totalFrequencia = (100 / qtdeAulas) * qtdeFalta
+        totalFrequencia = 100 - totalFrequencia
+
+        alert("Olá, " + nome + "! Sua frequência foi de " + totalFrequencia.toFixed(1) + "%")
+
+    }
+
+</script>

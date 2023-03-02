@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Execício 3</title>
+</head>
+<body>
+
+    <h1>Racha da Equipe Lantra</h1>
+    
+    <p>Insira a Qtde de amigos:</p>
+    <input id="inputQtdeAmigo">
+
+    <p>Insira o valor da pizza:</p>
+    <input id="inputValor">
+    
+    <br>
+
+    <button onclick="calcularValor()">#lovePizza</button>
+
+</body>
+</html>
+
+<script>
+
+    function calcularValor(){
+
+        var qtdeAmigo = inputQtdeAmigo.value
+        var valor = inputValor.value
+
+        var resultado = valor / qtdeAmigo
+
+        alert("Cada um dos " + qtdeAmigo + " amigos vai pagar R$" + resultado)
+
+
+    }
+
+
+
+
+</script>

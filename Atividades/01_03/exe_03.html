@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 3</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+        body {
+            background-color: #121214;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10vh;
+        }
+
+        .card {
+            background-color: #202024;
+            width: 420px;
+            height: 380px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .card p {
+            color: white;
+            font-family: 'Kanit', sans-serif;
+            font-size: 20px;
+            margin: 0;
+        }
+
+        .card input {
+            width: 300px;
+            height: 25px;
+            color: white;
+            font-family: 'Kanit', sans-serif;
+            font-size: 18px;
+
+            border: 2px solid #29292e;
+            border-radius: 5px;
+            background-color: #121214;
+        }
+
+        .card input:focus {
+            outline: 0;
+            border: 2px solid #8257e5;
+            transition: 0.5s;
+        }
+
+        .inputs {
+            margin: 15px;
+        }
+
+        button {
+            width: 150px;
+            height: 40px;
+            border-radius: 8px;
+            border: none;
+            background-color: #8257e5;
+            color: white;
+            font-family: 'Kanit', sans-serif;
+            font-size: 20px;
+            transition: 0.5s;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #9e7bf0;
+            cursor: pointer;
+        }
+
+        #freeza {
+            width: 30px;
+            height: 30px;
+        }
+
+        #contorno{
+            border: 5px solid #202024;
+            border-radius: 20px;
+            padding: 5px;
+        }
+
+        #parag{
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            color: white;
+            text-align: center;
+
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        #text{
+            font-family: 'Oswald', sans-serif;
+            font-size: 35px;
+            font-weight: bold;
+            color: white;
+            width: 800px;
+            height: 50px;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <span id="text">
+        Calculadora de KI
+        <span>
+            <img id="freeza"
+                src="https://cdn.discordapp.com/attachments/1011346860155355166/1076679267636744275/Cartoons__Anime_Dragonball_Artboard_11-512.png"
+                alt="Freeza">
+        </span>
+    </span>
+
+    <div id="contorno">
+        <div class="card">
+            <p id="parag">Veja o quão forte você é!</p>
+
+            <div class="inputs">
+                <p>Informe seu nome:</p>
+                <input id="inputNome">
+            </div>
+
+            <div class="inputs">
+                <p>Informe o seu KI:</p>
+                <input id="inputKi">
+            </div>
+
+            <button onclick="verificarKi()">Ver KI</button>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+    let normalKI = 0
+    let superSayajin = 50
+    let superSayajin2 = 100
+    let nome = ''
+
+    function verificarKi() {
+        nome = inputNome.value
+        normalKI = inputKi.value
+
+        alert(nome + ", seu KI na forma normal é equivalente a: " + normalKI)
+        alert(nome + ", já na forma SUPER SAYAJIN, seu KI equivale a: " + normalKI * superSayajin)
+        alert(nome + ", na sua forma SUPER SAYAJIN 2 seu KI atinge: " + normalKI * superSayajin2)
+    }
+</script>

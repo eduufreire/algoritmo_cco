@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5</title>
+</head>
+<body>
+    
+    <h2>Calculadora de Média</h2>
+
+    <p>Insira a 1º Nota:</p>
+    <input id="inputNota1">
+
+    <p>Insira a 2º Nota:</p>
+    <input id="inputNota2">
+
+    <br>
+
+    <button onclick="calcularMedia()">Calcular média</button>
+
+    <h1 id="texto"></h1>
+
+</body>
+</html>
+
+<script>
+
+    var texto = document.getElementById('texto')
+
+    function calcularMedia(){
+
+        var nota1 = Number(inputNota1.value)
+        var nota2 = Number(inputNota2.value)
+
+        var media = (nota1 + nota2) / 2
+
+        texto.innerHTML = "Sua média foi de " + media
+    
+
+    }
+
+
+</script>

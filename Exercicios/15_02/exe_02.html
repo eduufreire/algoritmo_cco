@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Execício 2</title>
+</head>
+<body>
+
+    <h1>Cálculo de Aposentadoria</h1>
+    
+    <p>Insira sua idade:</p>
+    <input id="inputIdade">
+
+    <br>
+
+    <button onclick="calcularAposentaria()">Aposentadoria</button>
+    
+</body>
+</html>
+
+<script>
+
+    var idade = 0
+
+    function calcularAposentaria(){
+
+        idade = Number(inputIdade.value)
+        alert(`Se for HOMEM, faltam ${70 - idade} anos para se aposentar \nSe for MULHER, faltam ${65 - idade} anos para se aposentar`)
+
+    }
+
+</script>

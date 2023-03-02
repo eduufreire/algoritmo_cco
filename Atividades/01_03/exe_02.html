@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 2</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+        body {
+            background-color: #121214;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10vh;
+        }
+
+        .header h1{
+            font-family: 'Oswald', sans-serif;
+            font-size: 40px;
+            color: white;
+
+            width: 800px;
+            height: 50px;
+
+            text-align: center;
+        }
+        
+        .buttons {
+            background-color: #202024;
+            width: 800px;
+            height: 120px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+            margin-bottom: 5vh;
+            border-radius: 10px;
+
+        }
+
+        button {
+            width: 150px;
+            height: 45px;
+
+            border-radius: 8px;
+            border: none;
+            background-color: #8257e5;
+            color: white;
+
+            font-family: 'Kanit', sans-serif;
+            font-size: 20px;
+            transition: 0.5s;
+        }
+
+        button:hover{
+            background-color: #9e7bf0;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .imagem{
+            background-color: #202024;
+            width: 800px;
+            height: 400px;
+            border-radius: 8px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #foto{
+            width: 300px;
+            height: 300px;
+            margin: 5px;
+            padding: 1px;
+            border-radius: 50%;
+        }
+
+        #text{
+            color: white;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 30px;
+        }
+
+        #contorno{
+            border: 5px solid #9e7bf0;
+            border-radius: 50%;
+            margin-top: 10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>O que faz um triatleta?</h1>
+    </div>
+
+    <div class="buttons">
+        <button onclick="fotoNadando()">Nada</button>
+        <button onclick="fotoCorrendo()">Corre</button>
+        <button onclick="fotoPedalando()">Pedala</button>
+    </div>
+
+    <div class="imagem">
+        <span id="text">Aperte um dos botões</span>
+
+        <div id="contorno">
+            <img id="foto"
+                src="https://img.freepik.com/fotos-gratis/ponto-de-interrogacao-no-sinal-de-fala-de-bolha-ou-icone-de-simbolo-renderizacao-em-3d_56104-1950.jpg"
+                alt="Foto"
+            >
+        </div>
+
+
+    </div>
+</body>
+
+</html>
+
+<script>
+
+    var imgNadando = 'https://www.amaralnatacao.com.br/wp-content/uploads/aprender-a-nadar1.jpg'
+    let imgCorrendo = 'https://runnersworld.com.br/wp-content/uploads/sites/4/2019/07/emagracer-correndo.jpg'
+    let imgPedalando = 'https://static4.depositphotos.com/1009043/351/i/450/depositphotos_3519176-stock-photo-biker-ceske-stredohori-czech-republic.jpg'
+
+    let elementImg = document.getElementById('foto')
+    let elementSpan = document.getElementById('text')
+
+
+    function fotoNadando() {
+        elementImg.src = imgNadando
+        elementSpan.innerHTML = 'Ele(a) nada!'
+    }
+
+    function fotoCorrendo() {
+        elementImg.src = imgCorrendo
+        elementSpan.innerHTML = 'Ele(a) também corre!'
+    }
+
+    function fotoPedalando() {
+        elementImg.src = imgPedalando
+        elementSpan.innerHTML = 'Pedala também!'
+    }
+
+</script>

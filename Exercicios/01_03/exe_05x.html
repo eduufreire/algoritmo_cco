@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercício 5</title>
+
+</head>
+
+<body>
+    <h2 class="title">Calculadora de Arrecadação</h2>
+
+                <p>Ingressos vendidos - Estudante:</p>
+                <input id="inputEstudante">
+            
+                <p>Ingressos vendidos - Comum:</p>
+                <input id="inputComum">
+            
+                <p>Valor do ingresso comum:</p>
+                <input id="inputValorIngresso">
+           
+                <p id="mensagem"></p>
+            
+
+            <button onclick="calculoArrecadacao()">Calcular</button>
+        
+</body>
+
+</html>
+
+<script>
+
+    var qtdeEstudante = 0
+    var qtdeComum = 0
+    var valorIngresso = 0
+    var totalArrecadacao = 0
+
+
+    function calculoArrecadacao() {
+
+        qtdeEstudante = inputEstudante.value
+        qtdeComum = inputComum.value
+        valorIngresso = inputValorIngresso.value
+
+        totalArrecadacao = (valorIngresso / 2) * qtdeEstudante
+        totalArrecadacao += valorIngresso * qtdeComum
+
+        var texto = "Foram vendidos: " + qtdeComum + " ingressos comuns, " + qtdeEstudante +
+        " ingressos de estudantes e foi arrecadado R$" + totalArrecadacao + "<br>"
+
+
+        mensagem.innerHTML += texto
+
+    }
+
+</script>
