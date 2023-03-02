@@ -5,4 +5,4 @@ Aulas ministradas pelos professores:
 - 👨‍💻 Frizza 
 - 👩‍💻 Raissa
 
-<img src="https://www.sptech.school/assets/images/logos/sptech_logo_negativa.png" alt="SPTECH" style="text-align: center;">
+#
