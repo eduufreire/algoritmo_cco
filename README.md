@@ -1,11 +1,10 @@
-<h1> Algoritmos - Atividades e Exercícios</h1>
+# Algoritmos - Atividades e Exercícios
 #
 
-<p> 
-    Aulas ministradas pelos professores: 
-    - 👨‍💻 JP
-    - 👨‍💻 Frizza 
-    - 👩‍💻 Raissa
-</p>
+Aulas ministradas pelos professores: 
+- 👨‍💻 JP
+- 👨‍💻 Frizza 
+- 👩‍💻 Raissa
+
 
 <img src="https://www.sptech.school/assets/images/logos/sptech_logo_negativa.png" alt="SPTECH">
