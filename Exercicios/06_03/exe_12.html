@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- a) Solicite o peso total num elevador
+b) Ao clicar num botão "Ligar elevador"...
+c) Caso o peso seja menor que 500, exiba um alert com a frase "Elevador vai se mover"
+d) Caso o peso seja a partir de 500, exiba um alert com "Alguém precisa descer do elevador" -->
+
+    <p>Informe o peso total no elevador:</p>
+    <input id="inputPeso">
+
+    <button onclick="verificarPeso()">ligar elevador</button>
+
+    <p id="msg"></p>
+
+</body>
+
+</html>
+
+<script>
+
+    function verificarPeso(){
+
+        var peso = Number(inputPeso.value)
+
+        if(peso < 500){
+            msg.innerHTML = `Elevador vai se mover`
+        }
+
+        if(peso > 500){
+            msg.innerHTML = `Alguém precisa descer do elevador`
+        }
+
+
+
+    }
+
+
+</script>

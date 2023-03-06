@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 9</title>
+</head>
+
+<body>
+
+
+    <!-- 9. . Refaça a questão anterior de tal forma que:
+a) Se o peso estimado for maior que 800...
+ a.1) Mas menor que 1000, a cor da frase fica a cor azul mesmo
+ a.2) Mas a partir de 1000 a cor da frase fica vermelha -->
+
+    <p>Informe a qtde de homens que entratam no elevador1:</p>
+    <input id="inputQtdeHomem">
+
+    <p>Informe a qtde de mulheres que entratam no elevador1:</p>
+    <input id="inputQtdeMulher">
+
+    <button onclick="calcularPeso()">Analisar peso</button>
+
+    <p id="msg"></p>
+    <p id="msg_bonus"></p>
+
+</body>
+
+</html>
+
+<script>
+
+    function calcularPeso(){
+
+        var qtdeHomem = Number(inputQtdeHomem.value)
+        var qtdeMulher = Number(inputQtdeMulher.value)
+
+        var totalPeso = (qtdeHomem * 80) + (qtdeMulher * 60)
+
+        msg_bonus.innerHTML = ''
+        msg.innerHTML = `Esse elevador suporta 800Kg e o peso estimado agora é de ${totalPeso}Kg`
+
+        if(totalPeso > 800){
+
+            if(totalPeso < 1000){
+                msg_bonus.style = "color: blue"
+                msg_bonus.innerHTML = `Será preciso descer alguém para o elevador andar`
+            }
+
+            if(totalPeso > 1000){
+                msg_bonus.style = "color: red"
+                msg_bonus.innerHTML = `Será preciso descer alguém para o elevador andar`
+            }
+
+        }
+
+    }
+
+</script>

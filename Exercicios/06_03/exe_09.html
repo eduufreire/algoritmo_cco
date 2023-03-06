@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <p>Informe a última série que assistiu:</p>
+    <input id="inputSerie">
+
+    <p>Informe a qtde de episódios assistidas:</p>
+    <input id="inputEpisodio">
+
+    <br>
+
+    <button onclick="verificarNivel()">Verificar nível</button>
+
+    <p id="msg"></p>
+</body>
+
+</html>
+
+
+<script>
+
+    function verificarNivel(){
+
+        var serie = inputSerie.value
+        var episodios = Number(inputEpisodio.value)
+
+        var total = (episodios * 22) / 60
+
+
+        msg.innerHTML += `Vejo que você gosta da série ${serie}`
+
+        if(total > 30){
+            msg.innerHTML += `<br>Uau, você realmente gosta dessa série por ter assistido ${total} horas!`
+        }
+
+
+
+    }
+
+
+
+</script>

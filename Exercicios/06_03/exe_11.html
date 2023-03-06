@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>Qtde de filhos:</p>
+    <input id="inputQtdeFilho">
+
+    <button onclick="analisarFamilia()">Analisar a família</button>
+
+    <p id="msg"></p>
+
+</body>
+
+</html>
+
+
+<script>
+
+    function analisarFamilia() {
+
+        var qtdeFilho = Number(inputQtdeFilho.value)
+
+        if (qtdeFilho > 0) {
+            msg.innerHTML += `<br>Não tem TV`
+        }
+
+        if (qtdeFilho > 1) {
+            msg.innerHTML += `<br>Não tem internet`
+        }
+
+        if (qtdeFilho > 2) {
+            msg.innerHTML += `<br>Não tem video-game`
+        }
+
+        if (qtdeFilho > 3) {
+            msg.innerHTML += `<br>Não tem Netflix <br><br>`
+        }
+
+    }
+
+
+
+</script>

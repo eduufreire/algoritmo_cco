@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>Nota 1:</p>
+    <input id="inputNota1">
+
+    <p>Nota 2:</p>
+    <input id="inputNota2">
+
+    <button onclick="verificarMedia()">Verificar situação</button>
+
+    <p id="msg"></p>
+
+</body>
+
+</html>
+
+
+<script>
+
+    function verificarMedia(){
+
+        var nota1 = Number(inputNota1.value)
+        var nota2 = Number(inputNota2.value)
+
+        var media = (nota1 + nota2) / 2
+
+        if(media >= 6){
+            msg.innerHTML = `Sua média é ${media}! Parabéns, você foi aprovado!`
+        }
+
+        if(media < 6){
+            msg.innerHTML = `Sua média é ${media}. Tente outra vez...`
+        }
+
+    }
+
+
+</script>
