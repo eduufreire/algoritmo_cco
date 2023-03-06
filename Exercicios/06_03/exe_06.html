@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>Informe a sua renda familiar</p>
+    <input id="inputRenda">
+
+    <p>Informe o valor da prestação</p>
+    <input id="inputPrestacao">
+
+    <button onclick="verificarFinanciamento()">Verificar financiamento</button>
+
+    <p id="msg"></p>
+    <p id="msg_alert"></p>
+</body>
+</html>
+
+<script>
+
+    function verificarFinanciamento(){
+
+        var renda = Number(inputRenda.value)
+        var prestacao = Number(inputPrestacao.value)
+
+        var total = (prestacao / renda) * 100
+
+        msg.innerHTML = `<br>A prestação corresponde a ${total}% da renda familiar`
+
+        if(total > 30){
+            msg_alert.style = "color: red; font-weight: bold;"
+            msg_alert.innerHTML = `Será necessário complementar a renda familiar`
+        }   
+
+    }
+
+</script>

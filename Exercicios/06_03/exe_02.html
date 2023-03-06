@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Quantidade de latas diárias:</p>
+    <input id="inputQtdeLata">
+
+    <button onclick="calcularQtde()">Calcular quantidade</button>
+
+    <br>
+
+    <p id="msg"></p>
+</body>
+
+</html>
+
+<script>
+
+    function calcularQtde(){
+        var qtdeLata = Number(inputQtdeLata.value)
+
+        var totalAno = 365 * qtdeLata
+
+        msg.innerHTML += `<br>Você bebe ${totalAno} latas por ano!`
+        
+        if(totalAno > 500){
+            msg.innerHTML += `<br>Cuidado com a diabetes!`
+        }
+    }
+
+</script>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>Informe a qtde de homens que entratam no elevador1:</p>
+    <input id="inputQtdeHomem">
+
+    <p>Informe a qtde de mulheres que entratam no elevador1:</p>
+    <input id="inputQtdeMulher">
+
+    <button onclick="calcularPeso()">Analisar peso</button>
+
+    <p id="msg"></p>
+    <p id="msg_bonus"></p>
+</body>
+</html>
+
+<script>
+
+    function calcularPeso(){
+        var qtdeHomem = Number(inputQtdeHomem.value)
+        var qtdeMulher = Number(inputQtdeMulher.value)
+
+        var somaTotal = (qtdeHomem * 80) + (qtdeMulher * 60)
+
+        msg_bonus.innerHTML = ''
+        msg.innerHTML = `Esse elevador suporta 800Kg e o peso estimado agora é de ${somaTotal}Kg`
+        
+        if(somaTotal > 800){
+            msg_bonus.style = "color: blue"
+            msg_bonus.innerHTML = `Será preciso descer alguém para o elevador andar`
+        }
+
+
+    }
+
+
+</script>
