@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicativo de Carona</title>
+</head>
+
+<body>
+
+    <p>Informe a distância percorrida:</p>
+    <input id="inputDistancia">
+
+    <p>Informe o volume de chamadas (0 a 100):</p>
+    <input id="inputVolumeChamada">
+
+    <br>
+
+    <button onclick="calcularCusto()">Calcular viagem</button>
+
+    <p id="msg"></p>
+    <p id="msg2"></p>
+    <p id="msg3"></p>
+</body>
+
+</html>
+
+
+<script>
+
+    function calcularCusto(){
+
+        var distancia = Number(inputDistancia.value)
+        var volumeChamada = Number(inputVolumeChamada.value)
+        
+        msg.innerHTML = 
+        `Neste momento o volume de chamadas é de ${volumeChamada}, iniciada a corrida para ${distancia} quilômetros`
+
+        distancia = distancia + 4
+
+        var totalCorrida = 7 + (distancia * 1.5)
+
+        if(volumeChamada < 20){
+            totalCorrida = totalCorrida - (totalCorrida * 0.05)
+        }
+
+        if(volumeChamada > 80){
+            totalCorrida = totalCorrida + (totalCorrida * 0.5)
+        }
+
+        var descontoMotorista = totalCorrida * 0.02
+        var valorLiquido = totalCorrida - descontoMotorista
+
+        msg2.innerHTML = 
+        `O valor final da corrida para o cliente será de <b>R$${totalCorrida}</b>`
+
+        msg3.innerHTML = 
+        `O valor descontado do motorista será <b>R$${descontoMotorista}</b>, logo ele 
+        receberá um valor líquido de <b>R$${valorLiquido}</b>`
+    }
+
+
+
+</script>
